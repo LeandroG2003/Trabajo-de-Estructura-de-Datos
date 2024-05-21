@@ -1,0 +1,151 @@
+//
+//  entero_largo.h
+//  Taller 2 - EdD - 2024.1
+//
+//  Plantilla librería implementación EnteroLargo
+
+#ifndef stdlib_h
+#define stdlib_h
+#include <stdlib.h>
+#endif /* stdlid_h */
+
+#ifndef stdio_h
+#define stdio_h
+#include <stdio.h>
+#endif /* stdio_h */
+
+#ifndef string_h
+#define string_h
+#include <string.h>
+#endif /* string_h */
+
+#ifndef lista_enlazada_h
+#define lista_enlazada_h
+#include "lista_enlazada.h"
+#endif /* lista_enlazada_h */
+
+//Puede agregar otras librerías implementadas en su proyecto o
+//de la librería estandar del lenguaje C.
+
+//
+//Definición estructura de datos
+//
+typedef struct _enterolargo{
+    //cantidad de dígitos
+    //signo
+    //digitos
+}EnteroLargo;
+
+//
+//Prototipos interfaz
+//
+EnteroLargo *creaEnteroLargoDesdeStr(char *numero);
+char *creaStrDesdeEnteroLargo(EnteroLargo *numero);
+void copiaEnteroLargo(EnteroLargo *destino, EnteroLargo *fuente);
+void eliminaEnteroLargo(EnteroLargo *numero);
+// !!!
+//La siguiente función es necesaria para que funcionen las pruebas automáticas
+//Abajo se porporciona una plantilla de implementación que DEBE modificar para
+//que funcione: debe agregar las nombres de los campos de su estructura y la
+//función que muestra el contenido de la lista enlazada de dígitos
+void muestraEnteroLargo(EnteroLargo *numero);
+// !!!
+void escribeEnteroLargo(char *nombreArchivo, EnteroLargo *numero);
+EnteroLargo *leeEnteroLargo(char *nombreArchivo);
+int igualEnteroLargo(EnteroLargo *numero1, EnteroLargo *numero2);
+EnteroLargo *sumaEnteroLargo(EnteroLargo *numero1, EnteroLargo *numero2);
+EnteroLargo *restaEnteroLargo(EnteroLargo *numero1, EnteroLargo *numero2);
+EnteroLargo *multiplicaEnteroLargo(EnteroLargo *multiplicando, EnteroLargo *multiplicador);
+EnteroLargo *divideEnteroLargo(EnteroLargo *dividendo, EnteroLargo *divisor);
+
+//
+//Implememntaciones
+//
+EnteroLargo *creaEnteroLargoDesdeStr(char *numero){
+    EnteroLargo *unEnteroLargo = NULL;
+    //...
+    return(unEnteroLargo);
+}
+
+
+char *creaStrDesdeEnteroLargo(EnteroLargo *numero){
+    char *auxStr = NULL;
+    //...
+    return(auxStr);
+}
+
+
+void copiaEnteroLargo(EnteroLargo *destino, EnteroLargo *fuente){
+    //...
+}
+
+
+void eliminaEnteroLargo(EnteroLargo *numero){
+    //...
+}
+
+//ESTA FUNCIÓN DEBE EXISTIR PARA QUE FUNCIONEN LAS PRUEBAS AUTOMÁTICAS
+//PARA QUE FUNCIONE DEBE HACER LOS CAMBIOS INDICADOS EN LOS COMENTARIOS
+void muestraEnteroLargo(EnteroLargo *numero){
+    if(numero !=NULL){
+        //reemplace <CANTIDAD_DIGITOS> por el campo de EnteroLargo que contiene
+        //la cantidad de dígitos del número
+        printf("[%d]",<CANTIDAD_DIGITOS>);
+        //reemplace <SIGNO> por el campo de EnteroLargo que contiene
+        //el signo del número en su estructura
+        printf("%c",<SIGNO>);
+        //reemplace <muestraListaDigitos(<DIGITOS>)> por la función de la lista
+        //enlazada que muestra el contenido de la lista de digitos (<DIGITOS>)
+        //del EnteroLargo
+        <muestraListaDigitos(<DIGITOS>)>;
+    }else{
+        printf("NULL");
+    }
+}
+
+
+void escribeEnteroLargo(char *nombreArchivo, EnteroLargo *numero){
+    //...
+}
+
+
+EnteroLargo *leeEnteroLargo(char *nombreArchivo){
+    EnteroLargo *unEnteroLargo = NULL;
+    //...
+    return(unEnteroLargo);
+}
+
+
+int igualEnteroLargo(EnteroLargo *numero1, EnteroLargo *numero2){
+    //...
+    return(0);
+}
+
+
+EnteroLargo *sumaEnteroLargo(EnteroLargo *numero1, EnteroLargo *numero2){
+    EnteroLargo *resultado = NULL;
+    //...
+    return (resultado);
+}
+
+
+EnteroLargo *restaEnteroLargo(EnteroLargo *numero1, EnteroLargo *numero2){
+    EnteroLargo *resultado = NULL;
+    //...
+    return (resultado);
+}
+
+
+EnteroLargo *multiplicaEnteroLargo(EnteroLargo *multiplicando, EnteroLargo *multiplicador){
+    EnteroLargo *resultado = NULL;
+    //...
+    return (resultado);
+}
+
+
+EnteroLargo *divideEnteroLargo(EnteroLargo *dividendo, EnteroLargo *divisor){
+    EnteroLargo *resultado = NULL;
+    //...
+    return (resultado);
+}
+
