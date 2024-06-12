@@ -41,7 +41,7 @@ int esAbbVacio(Abb *arbol){
 }
 
 
-int buscaValorAbb(Abb *arbol, int valor){
+int buscaValorAbb(Abb *arbol, int valor){ 
     if(arbol == NULL){
         return(0);
     }else if(valor < arbol->dato){
@@ -128,8 +128,32 @@ Abb *eliminaValorAbb(Abb *arbol, int valor){
     return(arbol);
 }
 
-//busca min
 //busca max
+int BuscaHijoMayor(Abb *arbol){
+    if(arbol == NULL){
+        printf("arbol nulo\n"); //esto se puede interpretar como que el min es 0
+    }
+        Abb *aux = arbol;
+        Abb *sgte = aux->hder;
+        while (sgte !=NULL){
+            aux = sgte;
+            sgte = sgte->hder;
+        }
+        return aux->dato;
+}
+//busca min
+int BuscaHijoMenor(Abb *arbol){
+    if(arbol == NULL){
+        printf("arbol nulo\n"); //esto se puede interpretar como que el min es 0
+    }
+        Abb *aux = arbol;
+        Abb *sgte = aux->hizq;
+        while (sgte !=NULL){
+            aux = sgte;
+            sgte = sgte->hizq;
+        }
+        return aux->dato;
+}
 
 //recorre en orden
 void recorreAbbEnOrden(Abb *arbol){
@@ -227,6 +251,3 @@ void muestraArbolGV(Abb *arbol, char *tipo, int tamano){
     printf("\n GV Generado! \n Nodos visitados : %i (Tasa:%1.3f)\n$$$\n\n", auxTamano, (double)auxTamano/(double)tamano);
     //getchar();
 }
-
-
-
