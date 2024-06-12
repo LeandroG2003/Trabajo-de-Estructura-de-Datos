@@ -36,12 +36,14 @@ int main(int argc, const char * argv[]) {
     
     buscaValorRutaAbb(arbol, 3);
     printf("\n");
-    buscaValorRutaAbb(arbol, 9);
-    printf("\n");
     buscaValorRutaAbb(arbol, 7);
+    printf("\n");
+    buscaValorRutaAbb(arbol, 9);
     printf("\n");
     buscaValorRutaAbb(arbol, 10);
     printf("\n");
+    printf("%d\n", BuscaHijoMayor(arbol));
+    printf("%d\n", BuscaHijoMenor(arbol));
 
     return 0;
 }
